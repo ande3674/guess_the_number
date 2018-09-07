@@ -55,7 +55,13 @@ def main():
 
         if result == correct:
             print('Guessed in ', count, ' guesses')
-            break
+            play_again = int(input('press 1 to play again, any other number to quit'))
+
+            if play_again == 1:
+                count = 0
+                continue
+            else:
+                break
 
 
 if __name__ == '__main__':
