@@ -1,3 +1,4 @@
+# ande3674 issue: count the number of guesses
 import random
 
 correct = 'you guessed correctly!'
@@ -35,12 +36,16 @@ def main():
     (low, high) = configure_range()
     secret = generate_secret(low, high)
 
+    count = 0
+
     while True:
         guess = get_guess()
+        count += 1
         result = check_guess(guess, secret)
         print(result)
 
         if result == correct:
+            print('Guessed in ', count, ' guesses')
             break
 
 
